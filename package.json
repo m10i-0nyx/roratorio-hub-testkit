@@ -1,0 +1,26 @@
+{
+  "name": "roratorio-hub-testkit",
+  "version": "1.0.0",
+  "description": "ROラトリオHubのためのテストキット",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m10i-0nyx/roratorio-hub-testkit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m10i-0nyx/roratorio-hub-testkit/issues"
+  },
+  "homepage": "https://github.com/m10i-0nyx/roratorio-hub-testkit#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1"
+  }
+}
