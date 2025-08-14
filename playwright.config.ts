@@ -4,6 +4,10 @@ import { defineConfig } from '@playwright/test';
 const baseURL = "http://localhost/roratorio-hub/ro4/m/calcx.html";
 
 export default defineConfig({
+    timeout: 10 * 1000,
+    expect: {
+        timeout: 5 * 1000,  　// expectのtimeoutの時間を変更
+    },
     projects: [
         {
             name: 'chromium',
