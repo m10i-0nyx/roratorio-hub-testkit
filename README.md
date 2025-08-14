@@ -17,3 +17,8 @@ npm install
 chmod +x ./start_test.sh
 ./start_test.sh
 ```
+
+# test spec開発
+```bash
+playwright codegen http://localhost/roratorio-hub/ro4/m/calcx.html
+```
