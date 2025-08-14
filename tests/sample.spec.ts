@@ -1,20 +1,18 @@
 import { test, expect } from '@playwright/test';
 
-const url: string = "http://localhost/roratorio-hub/ro4/m/calcx.html";
-
 test.describe('Job Tests', () => {
     const jobs = [
         { name: 'ノービス', baseLevel: '99', jobLevel: '10', expectedText: '-2495' },
         { name: 'ソードマン', baseLevel: '99', jobLevel: '50', expectedText: '-2495' },
     ];
 
-    test.beforeEach(async ({ page }) => {
+    test.beforeEach(async ({ page, baseURL, browserName }) => {
         // ページに移動
-        await page.goto(url);
+        await page.goto(baseURL!);
     });
 
     for (const job of jobs) {
-        test(`should test ${job.name}`, async ({ page }) => {
+        test(`should test ${job.name}`, async ({ page, baseURL, browserName }) => {
             // ジョブを選択
             await page.locator('#OBJID_SELECT_JOB').selectOption(job.name);
 

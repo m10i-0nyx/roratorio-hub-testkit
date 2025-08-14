@@ -1,12 +1,10 @@
 import { test, expect } from '@playwright/test';
 
-const url: string = "http://localhost/roratorio-hub/ro4/m/calcx.html";
-
-test.describe('シミュレーション (ウインドホーク) Test', () => {
-    test('究極のラスガンドへのエイムドボルト攻撃', async ({ page }) => {
+test.describe('シミュレーション (ウインドホーク)', () => {
+    test('究極のラスガンドへのエイムドボルト攻撃', async ({ page, baseURL, browserName }) => {
         // ページに移動
         await page.goto(
-            `${url}?cx1cy1xtHmpseEoA2pb100wA91cz21001_bQBqcpHsanjD5Kjy7cz22.419hcz23001UjsyxVGsDOltcz24001-hqRaqyBFwkAOj2cz25001-hf5YmjrPwDu6-lcz26001VjiS1h93o_86Cvcz27001UjfFpNvrv3Opcz28001VjszhODVJxCjG4cz29001-h8usaldNabe2Vocz2a001-he5smrfPoIf6ldcz2b.4hoicz2c.4hpacA1Z_1127456b89a3cA128c0cB1.m1Mvhf87Z-__-DxGGC1l5515h5B6GmBmqlG6jFll1l5cC1.ecD1.fxKfaaaaaaaaa5cR2.4124cW100dvx2001cZ1i2`,
+            `${baseURL}?cx1cy1xtHmpseEoA2pb100wA91cz21001_bQBqcpHsanjD5Kjy7cz22.419hcz23001UjsyxVGsDOltcz24001-hqRaqyBFwkAOj2cz25001-hf5YmjrPwDu6-lcz26001VjiS1h93o_86Cvcz27001UjfFpNvrv3Opcz28001VjszhODVJxCjG4cz29001-h8usaldNabe2Vocz2a001-he5smrfPoIf6ldcz2b.4hoicz2c.4hpacA1Z_1127456b89a3cA128c0cB1.m1Mvhf87Z-__-DxGGC1l5515h5B6GmBmqlG6jFll1l5cC1.ecD1.fxKfaaaaaaaaa5cR2.4124cW100dvx2001cZ1i2`,
         );
 
         // 要素に対する操作
@@ -15,9 +13,9 @@ test.describe('シミュレーション (ウインドホーク) Test', () => {
         await page.getByRole('option', { name: '究極のラスガンド' }).click();
         await page.getByRole('button', { name: '計算する' }).click();
 
-        // ダメージ確認
-        await page.getByText('2095032', { exact: true }).first().click(); // 最小ダメージ
-        await page.getByText('1717271', { exact: true }).first().click(); // 平均ダメージ
-        await page.getByText('2618790', { exact: true }).first().click(); // 最大ダメージ
+        // ダメージ検証
+        await expect(page.getByText('2095032', { exact: true }).first()).toBeVisible(); // 最小ダメージ
+        await expect(page.getByText('1717271', { exact: true }).first()).toBeVisible(); // 平均ダメージ
+        await expect(page.getByText('2618790', { exact: true }).first()).toBeVisible(); // 最大ダメージ
     });
 });
