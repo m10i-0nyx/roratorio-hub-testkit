@@ -12,4 +12,4 @@ podman run -it --rm \
   -v $(pwd):/work \
   -w /work \
   localhost/playwright:latest \
-  npx playwright test --fully-parallel --trace retain-on-failure
+  npx playwright test
