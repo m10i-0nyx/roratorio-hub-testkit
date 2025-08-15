@@ -42,6 +42,50 @@ test.describe('Job Tests', () => {
         { name: 'ハイ アーチャー', baseLevel: '99', jobLevel: '50', statusPointMax: '99', expectedText: '-2443' },
         { name: 'ハイ マジシャン', baseLevel: '99', jobLevel: '50', statusPointMax: '99', expectedText: '-2443' },
         { name: 'ハイ マーチャント', baseLevel: '99', jobLevel: '50', statusPointMax: '99', expectedText: '-2443' },
+        { name: 'テコンキッド', baseLevel: '99', jobLevel: '50', statusPointMax: '99', expectedText: '-2495' },
+        { name: '拳聖', baseLevel: '99', jobLevel: '50', statusPointMax: '99', expectedText: '-2495' },
+        { name: 'ソウルリンカー', baseLevel: '99', jobLevel: '50', statusPointMax: '99', expectedText: '-2495' },
+        { name: '忍者', baseLevel: '99', jobLevel: '70', statusPointMax: '99', expectedText: '-2495' },
+        { name: 'ガンスリンガー', baseLevel: '99', jobLevel: '70', statusPointMax: '99', expectedText: '-2495' },
+        { name: 'ルーンナイト', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'アークビショップ', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'レンジャー', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'ウォーロック', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'メカニック', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'ロイヤルガード', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'シャドウチェイサー', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: '修羅', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'ミンストレル', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'ワンダラー', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'ソーサラー', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'ジェネティック', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4363' },
+        { name: '影狼', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4415' },
+        { name: '朧', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4415' },
+        { name: 'スーパーノービス＋', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4415' },
+        { name: 'リベリオン', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4415' },
+        { name: 'サモナー', baseLevel: '200', jobLevel: '60', statusPointMax: '130', expectedText: '-4415' },
+        { name: '星帝', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4415' },
+        { name: 'ソウルリーパー', baseLevel: '200', jobLevel: '70', statusPointMax: '130', expectedText: '-4415' },
+        { name: 'ドラゴンナイト', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'シャドウクロス', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'カーディナル', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'ウィンドホーク', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'アークメイジ', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'マイスター', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'インペリアルガード', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'アビスチェイサー', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'インクイジター', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'トルバドゥール', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'トルヴェール', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'エレメンタルマスター', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: 'バイオロ', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4363' },
+        { name: '天帝', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4415' },
+        { name: 'ソウルアセティック', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4415' },
+        { name: '蜃気楼', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4415' },
+        { name: '不知火', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4415' },
+        { name: 'ナイトウォッチ', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4415' },
+        { name: 'ハイパーノービス', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4415' },
+        { name: 'スピリットハンドラー', baseLevel: '260', jobLevel: '55', statusPointMax: '130', expectedText: '-4415' },
     ];
 
     test.beforeEach(async ({ page, baseURL, browserName }) => {
@@ -55,14 +99,14 @@ test.describe('Job Tests', () => {
             await page.locator('#OBJID_SELECT_JOB').selectOption(job.name);
 
             // ステータスを設定
-            await page.locator('#OBJID_SELECT_BASE_LEVEL').selectOption(job.baseLevel);
-            await page.locator('#OBJID_SELECT_JOB_LEVEL').selectOption(job.jobLevel);
             await page.locator('#OBJID_SELECT_STATUS_STR').selectOption(job.statusPointMax);
             await page.locator('#OBJID_SELECT_STATUS_AGI').selectOption(job.statusPointMax);
             await page.locator('#OBJID_SELECT_STATUS_VIT').selectOption(job.statusPointMax);
             await page.locator('#OBJID_SELECT_STATUS_INT').selectOption(job.statusPointMax);
             await page.locator('#OBJID_SELECT_STATUS_DEX').selectOption(job.statusPointMax);
             await page.locator('#OBJID_SELECT_STATUS_LUK').selectOption(job.statusPointMax);
+            await page.locator('#OBJID_SELECT_BASE_LEVEL').selectOption(job.baseLevel);
+            await page.locator('#OBJID_SELECT_JOB_LEVEL').selectOption(job.jobLevel);
 
             // 結果を検証
             await expect(page.locator("#A_STPOINT").getByText(job.expectedText)).toBeVisible();

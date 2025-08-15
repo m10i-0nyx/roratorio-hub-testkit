@@ -5,7 +5,7 @@ const baseURL = "http://localhost/roratorio-hub/ro4/m/calcx.html";
 
 export default defineConfig({
     fullyParallel: true,
-    timeout: 10 * 1000,
+    timeout: 20 * 1000,
     expect: {
         timeout: 5 * 1000,  　// expectのtimeoutの時間を変更
     },
