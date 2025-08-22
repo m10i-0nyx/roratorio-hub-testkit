@@ -8,6 +8,7 @@ podman build --tag playwright:latest \
 podman image ls --filter "dangling=true" -q | xargs -r podman image rm
 
 podman run -it --rm \
+  --name testing-playwright \
   --network=host \
   -v $(pwd):/work \
   -w /work \
