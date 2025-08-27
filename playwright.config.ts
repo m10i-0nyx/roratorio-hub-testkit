@@ -14,7 +14,7 @@ export default defineConfig({
             name: 'chromium',
             use: {
                 launchOptions: {
-                    headless: true,
+                    args: ["--headless=new"]
                 },
                 baseURL: baseURL,
                 browserName: 'chromium'
