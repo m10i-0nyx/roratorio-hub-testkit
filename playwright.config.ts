@@ -32,8 +32,8 @@ export default defineConfig({
         },
     ],
     use: {
-        trace: 'retain-on-failure',
+        trace: process.env.CI ? 'off' : 'retain-on-failure',
         screenshot: { mode: 'only-on-failure', fullPage: true },
-        video: "retain-on-failure",
+        video: process.env.CI ? 'off' : 'retain-on-failure'
     }
 });
