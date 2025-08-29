@@ -1,11 +1,11 @@
 import { defineConfig } from '@playwright/test';
 
 // 環境に合わせてURLを設定
-const baseURL = "http://localhost/roratorio-hub/ro4/m/calcx.html";
+const baseURL = process.env.BASE_URL;
 
 export default defineConfig({
     fullyParallel: true,
-    timeout: 20 * 1000,
+    timeout: 30 * 1000,
     expect: {
         timeout: 5 * 1000,  　// expectのtimeoutの時間を変更
     },

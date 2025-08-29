@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/m10i-0nyx/roratorio-hub-testkit#readme",
   "devDependencies": {
-    "@playwright/test": "^1.54.1"
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.3.0"
   }
 }
