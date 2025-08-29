@@ -1,8 +1,6 @@
 FROM docker.io/library/node:24-slim
 
 WORKDIR /opt/workspace
-COPY playwright.config.ts .
-COPY package*.json .
 COPY LICENSE .
 
 RUN set -x \
@@ -14,6 +12,7 @@ RUN set -x \
     && playwright install chromium firefox --only-shell --with-deps
 
 ENV BASE_URL="http://localhost/roratorio-hub/ro4/m/calcx.html"
+COPY playwright.config.ts .
 COPY tests/ tests/
 
 CMD ["npx", "playwright", "test"]
