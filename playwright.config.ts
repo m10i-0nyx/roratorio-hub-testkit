@@ -14,7 +14,7 @@ export default defineConfig({
             name: 'chromium',
             use: {
                 launchOptions: {
-                    headless: true,
+                    args: ["--headless=new"]
                 },
                 baseURL: baseURL,
                 browserName: 'chromium'
@@ -32,8 +32,8 @@ export default defineConfig({
         },
     ],
     use: {
-        trace: 'retain-on-failure',
+        trace: process.env.CI ? 'off' : 'retain-on-failure',
         screenshot: { mode: 'only-on-failure', fullPage: true },
-        video: "retain-on-failure",
+        video: process.env.CI ? 'off' : 'retain-on-failure'
     }
 });
